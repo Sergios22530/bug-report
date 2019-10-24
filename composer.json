@@ -13,7 +13,7 @@
   "minimum-stability": "master",
   "version": "3.2.1",
   "require": {
-    "sergios/yii2-bug-report": "*",
+    "sergios/yii2-worksection": "*",
     "yiisoft/yii2": ">=2.0.1",
     "php": ">=7.0"
   },
