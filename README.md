@@ -1,5 +1,5 @@
 # Установка и настройка
-<code>composer require doris/yii2-bug-report "*"</code>
+<code>composer require sergios/yii2-bug-report "*"</code>
 
 В параметраы <code>frontend/config/params</code> необходимо положить следующие настройки:<br>
 <pre>
@@ -12,7 +12,7 @@
 <pre>
 'bootstrap' => ['bugReport'],
 'modules' => [
-	'bugReport' => 'doris\bugReport\module\Handler',
+	'bugReport' => 'sergios\bugReport\module\Handler',
 ],
 </pre>
 
@@ -20,7 +20,7 @@
 форму, попап, скрипты, стили и т.д:<br>
 
 <pre>
-use doris\bugReport\widgets\bugReportWidget\BugReportWidget;
+use sergios\bugReport\widgets\bugReportWidget\BugReportWidget;
 
 BugReportWidget::widget();
 </pre>
