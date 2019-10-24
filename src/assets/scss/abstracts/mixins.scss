@@ -1,0 +1,145 @@
+@import "../properties";
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin vertical-align($align: middle) {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+
+  > * {
+    font-size: 16px;
+    line-height: 1.2em;
+    display: inline-block;
+    vertical-align: $align;
+  }
+
+  &:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: $align;
+  }
+}
+
+// stretch horizontally
+@mixin text-justify($position: middle) {
+  text-align: justify;
+  text-justify: distribute;
+  font-size: 0;
+  line-height: 0;
+
+  > * {
+    font-size: 16px;
+    line-height: 1.5em;
+    display: inline-block;
+    vertical-align: $position;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+// clear both
+@mixin clear-both($after: true) {
+
+  @if $after {
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  } @else {
+    &:before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+@mixin text-dots() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin scrollbar($trackColor: rgba(255, 255, 255, .5), $thumbColor:$dark, $width: 3px) {
+  &::-webkit-scrollbar {
+    width: $width;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $trackColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumbColor;
+    outline: none;
+  }
+}
+
+@mixin grid($with, $prefix: '', $padding: 15) {
+  @for $i from 0 through 12 {
+    .col-#{$prefix}#{$i} {
+      width: $i*$with;
+      padding: 0 #{$padding}px;
+      box-sizing: border-box;
+    }
+
+    .col-left-offset-#{$prefix}#{$i} {
+      margin-left: $i*$with;
+    }
+
+    .col-right-offset-#{$prefix}#{$i} {
+      margin-right: $i*$with;
+    }
+  }
+}
+
+@mixin line-uppercase($color: $black) {
+  position: relative;
+  line-height: 1.5em;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: $color;
+    transition: width 0.2s;
+  }
+
+  @media #{$vertical-tablet} {
+    &:after {
+      display: none !important;
+    }
+  }
+
+  &:hover {
+    &:after {
+      width: 0;
+    }
+  }
+}
+

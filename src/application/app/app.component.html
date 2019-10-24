@@ -1,0 +1,16 @@
+<div class="app">
+    <modal name="bug-report-tool" class="bug-report-tool-modal" :width="'100%'" :height="'100%'" @closed="cleanStore">
+        <bug-report-tool></bug-report-tool>
+    </modal>
+
+    <modal name="authorization" class="authorization-modal" :width="'100%'" :height="'100%'">
+        <authorization></authorization>
+    </modal>
+
+    <notifications group="success-message" :position="'top center'" :width="'400px'"/>
+    <notifications group="error-message" :position="'top center'" :width="'400px'"/>
+
+    <comments-list></comments-list>
+
+    <application-navigation></application-navigation>
+</div>

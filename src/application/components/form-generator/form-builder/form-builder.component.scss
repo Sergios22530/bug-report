@@ -1,0 +1,30 @@
+@import "../../../../assets/scss/properties";
+
+.form-builder {
+  .form-error {
+    font-family: $font2;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.2em;
+    font-size: 12px;
+    color: $red;
+    padding: 0;
+  }
+
+  .errors.help-block{
+    margin-top: 5px;
+  }
+
+  .button_submit {
+    margin-top: 30px;
+    margin-left: 2px;
+  }
+
+  legend {
+    display: none;
+  }
+
+  .field-submit{
+    margin-top: 20px;
+  }
+}

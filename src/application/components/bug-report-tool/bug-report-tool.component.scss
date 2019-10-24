@@ -1,0 +1,11 @@
+.bug-report-tool {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+
+  .form-builder{
+    width: 100%;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="form-builder" xmlns:v-on="http://www.w3.org/1999/xhtml">
+	<div class="form-builder_wrap" v-on:click="isTouched = true">
+		<vue-form-generator tag="div" ref="form" :schema="formSchema" :model="model" :options="formOptions"/>
+
+		<label v-if="!isTouched && formError" class="form-error" v-html="formError"></label>
+	</div>
+
+	<div class="button button_submit"
+		 v-if="button"
+		 v-bind:class="button.class"
+		 xmlns:v-on="http://www.w3.org/1999/xhtml"
+		 xmlns:v-bind="http://www.w3.org/1999/xhtml">
+		<loader :loading="schema.loading"></loader>
+		<div class="button_wrap" v-on:click="submit">
+			<a class="button_link" href="javascript:void(0);">
+				<div class="button_text">{{button.text}}</div>
+			</a>
+		</div>
+	</div>
+
+	<slot></slot>
+</div>

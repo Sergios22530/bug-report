@@ -1,0 +1,43 @@
+@import "../properties";
+
+div.v--modal-overlay {
+  background: rgba(0, 0, 0, 0.63);
+
+  &.bug-report-tool-modal {
+    .v--modal-background-click {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .v--modal {
+      box-shadow: none;
+      background-color: transparent;
+      height: 80% !important;
+      width: 80% !important;
+    }
+  }
+
+  &.authorization-modal{
+    .v--modal-background-click{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .v--modal {
+      box-shadow: none;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      max-width: 500px;
+      max-height: 500px;
+      height: auto!important;
+      border-radius: 0;
+    }
+  }
+}
+
+@import "../media/modal";

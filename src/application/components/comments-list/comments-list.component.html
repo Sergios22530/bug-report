@@ -1,0 +1,6 @@
+<div class="comments-list" v-show="isActive()">
+    <template v-if="issues.length">
+        <comment-list-item v-for="issue in issues" :issue="issue"/>
+    </template>
+    <div class="empty-list" v-else>Тасок нету! Во славу Арстоцки!</div>
+</div>

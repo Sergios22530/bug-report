@@ -1,0 +1,32 @@
+@import "../../../assets/scss/properties";
+@import "../../../assets/scss/abstracts/mixins";
+
+.comments-list {
+  margin: 5px;
+  box-shadow: $shadow;
+  border: 1px solid $red;
+  background-color: $dark;
+  width: 450px;
+  max-width: 100%;
+  max-height: 500px;
+  overflow: auto;
+  position: relative;
+  @include scrollbar($gray, #c50000, 4px);
+}
+
+.empty-list {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba($white, 0.4);
+  font-family: $font1;
+  font-size: 20px;
+  font-weight: 600;
+}

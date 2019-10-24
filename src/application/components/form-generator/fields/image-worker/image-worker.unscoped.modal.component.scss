@@ -1,0 +1,27 @@
+@import "../../../../../assets/scss/properties";
+
+// for laptops and hd monitors
+@media #{$laptops} {
+
+}
+
+// for tablets
+@media #{$horizontal-tablet} {
+  .form-custom-group.image-worker {
+    &:after {
+      display: flex;
+    }
+  }
+}
+
+@media #{$vertical-tablet} {
+}
+
+//for mobile
+@media #{$horizontal-mobile} {
+
+}
+
+@media #{$vertical-mobile} {
+
+}

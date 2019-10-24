@@ -1,0 +1,25 @@
+{
+  "name": "sergios/bug-report",
+  "description": "Library for generation report. Based on yii 2 framework and worksection api.",
+  "homepage": "https://github.com/Sergios22530/bug-report",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dmitrij K.",
+      "email": "d.develop@protonmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "version": "3.2.1",
+  "require": {
+    "sergios/yii2-worksection": "*",
+    "yiisoft/yii2": "~2.0.1",
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "doris\\bugReport\\": ""
+    }
+  }
+}

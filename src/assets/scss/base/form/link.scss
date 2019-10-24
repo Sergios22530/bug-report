@@ -1,0 +1,17 @@
+@import "../../properties";
+@import "../../abstracts/mixins";
+
+.vue-form-generator {
+  .form-link {
+	a {
+	  font-family: $font1;
+	  font-style: normal;
+	  font-weight: 500;
+	  line-height: normal;
+	  font-size: 12px;
+	  text-decoration-line: underline;
+	  color: $dark;
+	  mix-blend-mode: normal;
+	}
+  }
+}

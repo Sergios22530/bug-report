@@ -1,0 +1,31 @@
+@import "../../../assets/scss/properties";
+@import "../../../assets/scss/abstracts/mixins";
+
+.authorization {
+  padding: 40px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__button {
+    margin-top: 50px;
+  }
+
+  &__form {
+    position: relative;
+    padding: 20px;
+  }
+
+  &__form-text {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 26px;
+  }
+}

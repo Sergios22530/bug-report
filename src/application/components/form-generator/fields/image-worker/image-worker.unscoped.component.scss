@@ -1,0 +1,33 @@
+@import "../../../../../assets/scss/properties";
+@import "../../../../../assets/scss/abstracts/mixins";
+
+.image-worker {
+  .field-image-worker {
+    height: 100%;
+  }
+
+  .field-wrap {
+    height: 100%;
+  }
+}
+
+.form-custom-group.image-worker {
+  position: relative;
+
+  &:after {
+    content: 'Место для скролла';
+    position: absolute;
+    bottom: 0;
+    height: 75px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: $gray;
+    font-size: 32px;
+    font-family: $font1;
+    font-weight: bold;
+    background-color: $dark;
+    left: 0;
+    right: 0;
+  }
+}

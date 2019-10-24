@@ -1,0 +1,14 @@
+<div class="application-navigation" xmlns:v-on="http://www.w3.org/1999/xhtml"
+     xmlns:v-bind="http://www.w3.org/1999/xhtml">
+    <div class="application-navigation__buttons">
+        <i class="application-navigation__button fas fa-camera"
+           v-if="client"
+           v-on:click="showCanvasModal"></i>
+        <i class="application-navigation__button fa-user"
+           v-bind:class="[client ? 'fas' : 'far']"
+           v-on:click="showAuthorizationModal"></i>
+        <i class="application-navigation__button fas fa-list-ul"
+           v-bind:class="{active:isListActive()}"
+           v-on:click="toggleListStatus"></i>
+    </div>
+</div>

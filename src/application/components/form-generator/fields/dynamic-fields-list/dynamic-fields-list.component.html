@@ -1,0 +1,8 @@
+<div class="dynamic-fields-list" v-if="fields.length">
+    <div class="dynamic-fields-list__field" v-for="field in fields" key="field.index">
+        <label>{{field.label}}</label>
+        <input type="text"
+               v-on:input="(event)=>{changeValue(event.target.value, field.index)}"
+               v-bind:placeholder="field.label">
+    </div>
+</div>

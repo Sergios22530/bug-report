@@ -1,0 +1,28 @@
+@import "../properties";
+
+// for laptops and hd monitors
+@media #{$laptops} {
+  div.v--modal-overlay {
+    &.bug-report-tool-modal {
+      .v--modal {
+        height: 90%!important;
+        width: 90%!important;
+      }
+    }
+  }
+}
+
+// for tablets
+@media #{$horizontal-tablet} {
+}
+
+@media #{$vertical-tablet} {
+}
+
+//for mobile
+@media #{$horizontal-mobile} {
+}
+
+@media #{$vertical-mobile} {
+
+}

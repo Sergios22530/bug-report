@@ -1,0 +1,10 @@
+<div class="bug-report-tool">
+    <loader :loading="loading"></loader>
+
+    <form-builder v-if="Object.keys(schema).length"
+                  ref="form"
+                  :schema="schema"
+                  :model="model"
+                  :form-error="formError">
+    </form-builder>
+</div>

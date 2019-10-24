@@ -1,0 +1,39 @@
+@import "../../../../../../assets/scss/properties";
+@import "../../../../../../assets/scss/abstracts/mixins";
+
+.canvas-module {
+  min-height: 300px;
+  border: 1px solid $red;
+  margin: 5px 0 0;
+  box-shadow: $shadow;
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+
+  .canvas-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba($white, 0.4);
+    font-family: $font1;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  canvas {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

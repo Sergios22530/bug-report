@@ -1,0 +1,66 @@
+@import "../properties";
+
+.button {
+  overflow: visible;
+  width: auto;
+  height: auto;
+  display: inline-block;
+
+  &_wrap {
+    position: relative;
+    border: 1px solid;
+    width: auto;
+    background-color: $white;
+    box-sizing: border-box;
+    transition: top 0.1s, left 0.1s, background-color 0.1s;
+  }
+
+  &_link {
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0 40px;
+    position: relative;
+    display: block;
+  }
+
+  &_text {
+    font-family: $font1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: $black;
+    transition: color 0.1s;
+  }
+
+  &__black {
+    background-color: $dark;
+    border: 1px solid $red;
+    box-shadow: $shadow;
+    transition: box-shadow 0.15s;
+
+    &:hover {
+      box-shadow: $hover-shadow;
+    }
+
+    .button_wrap {
+      background-color: $dark;
+      border: none;
+    }
+
+    .button_text {
+      color: $white;
+    }
+  }
+}
+
+
+/*
+<div class="button button__orange">
+	<div class="button_wrap">
+		<router-link class="button_link" to="/">
+			<div class="button_text">На головну</div>
+		</router-link>
+	</div>
+</div>
+ */

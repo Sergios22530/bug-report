@@ -1,0 +1,24 @@
+<div class="image-worker">
+    <div class="image-worker__navigation">
+        <div class="image-worker__tools">
+            <div class="image-worker__tool">
+                <square-tool></square-tool>
+            </div>
+            <div class="image-worker__tool">
+                <point-tool></point-tool>
+            </div>
+        </div>
+        <div class="image-worker__load-methods">
+            <div class="image-worker__load-method download-field">
+                <input type="file" id="download-field" class="download-field__input"
+                       v-on:change="loadImage" accept="image/x-png,image/gif,image/jpeg"/>
+                <label for="download-field" class="download-field__label">Загрузить</label>
+            </div>
+            <div class="image-worker__separator">/</div>
+            <div class="image-worker__load-method" v-on:click="makeScreen">Сделать скрин</div>
+        </div>
+    </div>
+    <div class="image-worker__canvas">
+        <canvas-module></canvas-module>
+    </div>
+</div>

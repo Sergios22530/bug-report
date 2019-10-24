@@ -1,0 +1,35 @@
+@import "../../../assets/scss/properties";
+@import "../../../assets/scss/abstracts/mixins";
+
+// for laptops and hd monitors
+@media #{$laptops} {
+
+}
+
+// for tablets
+@media #{$horizontal-tablet} {
+}
+
+@media #{$vertical-tablet} {
+}
+
+//for mobile
+@media #{$horizontal-mobile} {
+}
+
+@media #{$vertical-mobile} {
+  .application-navigation {
+    &__buttons {
+      flex-direction: row;
+    }
+
+    &__button {
+      padding: 10px;
+
+      &:not(:first-child) {
+        margin-top: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+}

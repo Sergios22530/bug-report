@@ -1,0 +1,33 @@
+@import "../../../assets/scss/properties";
+@import "../../../assets/scss/abstracts/mixins";
+
+.application-navigation {
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  &__button {
+    display: flex;
+    padding: 5px;
+    border: 1px solid $red;
+    box-shadow: $shadow;
+    transition: box-shadow 0.15s;
+    cursor: pointer;
+    color: $red;
+    background-color: $dark;
+
+    &:hover {
+      box-shadow: $hover-shadow;
+    }
+
+    &.active {
+      box-shadow: $active-shadow;
+    }
+
+    &:not(:first-child) {
+      margin-top: 7px;
+    }
+  }
+}

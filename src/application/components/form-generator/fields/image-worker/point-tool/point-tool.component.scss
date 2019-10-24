@@ -1,0 +1,29 @@
+@import "../../../../../../assets/scss/properties";
+@import "../../../../../../assets/scss/abstracts/mixins";
+
+.point-tool {
+  display: flex;
+  width: 40px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0 solid $red;
+  background-color: $dark;
+  color: $red;
+  box-shadow: 0 0 5px 1px $black;
+  cursor: pointer;
+  box-shadow: $shadow;
+  transition: box-shadow 0.15s;
+
+  &:hover:not(&_active) {
+    box-shadow: $hover-shadow;
+  }
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  &__active {
+    border-bottom: 1px solid $red;
+  }
+}

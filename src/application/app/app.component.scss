@@ -1,0 +1,11 @@
+@import "../../assets/scss/properties";
+@import "../../assets/scss/abstracts/mixins";
+
+.app {
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+}

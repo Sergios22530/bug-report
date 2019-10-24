@@ -1,0 +1,29 @@
+@import "../../../../../../assets/scss/properties";
+
+// for laptops and hd monitors
+@media #{$laptops} {
+
+}
+
+// for tablets
+@media #{$horizontal-tablet} {
+
+}
+
+@media #{$vertical-tablet} {
+}
+
+//for mobile
+@media #{$horizontal-mobile} {
+  .canvas-module {
+    .canvas-text {
+      font-size: 14px;
+      padding: 0 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media #{$vertical-mobile} {
+
+}

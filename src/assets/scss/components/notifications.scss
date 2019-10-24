@@ -1,0 +1,31 @@
+@import "../properties";
+
+div.notification-wrapper {
+  padding: 10px;
+}
+
+div.vue-notification {
+  padding: 10px 15px;
+
+  &.error {
+    background: $dark;
+    border-left-color: $red;
+  }
+
+  &.success {
+    background: $dark;
+    border-left-color: $green;
+  }
+
+  .notification-content {
+    font-weight: 100;
+    font-family: $font1;
+    padding: 10px 0 0;
+    font-size: 14px;
+  }
+
+  .notification-title {
+    font-size: 16px;
+    font-family: $font1;
+  }
+}

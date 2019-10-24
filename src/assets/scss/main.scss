@@ -1,0 +1,11 @@
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "base/form/index";
+@import "base/button";
+@import "base/simple-text";
+@import "components/notifications";
+
+* {
+  &:focus {
+    outline: none;
+  }
+};

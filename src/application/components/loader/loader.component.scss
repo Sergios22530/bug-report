@@ -1,0 +1,86 @@
+@import "../../../assets/scss/properties";
+@import "../../../assets/scss/abstracts/mixins";
+
+.loader-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  transform: scale(1) translate3d(0, 0, 0);
+  z-index: 9999;
+
+  g,
+  circle {
+	transform-origin: 50% 50%;
+  }
+}
+
+.core {
+  > .path {
+	fill: $red;
+	visibility: hidden;
+	transform: scale(1, 1);
+	transition: all 0.625s ease-in-out 0.15625s;
+  }
+}
+
+.spinner {
+  opacity: 1;
+  transition: opacity 0.1s 0.1s;
+  animation: rotate 1.25s linear infinite;
+
+  > .path {
+	stroke: $red;
+	stroke-width: 6;
+	stroke-dasharray: 157;
+	stroke-dashoffset: 157;
+	animation: spinner 1.25s both infinite ease-in-out;
+  }
+}
+
+@keyframes rotate {
+  0% {
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+  }
+  100% {
+	-moz-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+	stroke-dasharray: 157;
+	stroke-dashoffset: 157;
+  }
+  65% {
+	stroke-dasharray: 157;
+	stroke-dashoffset: 39.25;
+	transform: rotate(135deg);
+  }
+  100% {
+	stroke-dasharray: 157;
+	stroke-dashoffset: 157;
+	transform: rotate(450deg);
+  }
+}

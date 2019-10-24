@@ -1,0 +1,23 @@
+<div class="authorization">
+    <div class="authorization__inform" v-if="client">
+        <div class="authorization__intorm-text simple-text">Ты уже авторизовался в системе, {{client.firstName}}.</div>
+        <div class="authorization__button button button__black" v-on:click="clearUser">
+            <div class="button_wrap">
+                <a href="javascript:void(0);" class="button_link">
+                    <div class="button_text">Выйти</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="authorization__form" v-else>
+        <loader :loading="loading"></loader>
+
+        <div class="authorization__form-text simple-text">Авторизация</div>
+
+        <form-builder ref="form"
+                      :schema="schema"
+                      :model="model"
+                      :form-error="formError">
+        </form-builder>
+    </div>
+</div>

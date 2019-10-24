@@ -1,0 +1,106 @@
+@import "../../../../assets/scss/properties";
+@import "../../../../assets/scss/abstracts/mixins";
+
+.comments-list-item {
+  color: $white;
+  padding: 15px 10px 10px;
+  position: relative;
+  font-family: $font1;
+  text-shadow: 0 0 2px $black;
+  box-shadow: none;
+  width: 100%;
+  transition: box-shadow 0.2s;
+
+  &__inform-list {
+    margin-top: 10px;
+  }
+
+  &__info {
+    .text {
+      color: $red;
+    }
+
+    .value {
+      margin-left: 5px;
+    }
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 10px 1px $black;
+  }
+
+  &__id {
+    font-size: 12px;
+
+    .id-copy {
+      margin-left: 10px;
+      color: $red;
+      cursor: pointer;
+      text-shadow: none;
+      transition: text-shadow 0.2s;
+
+      &:hover {
+        text-shadow: 0 0 7px $black;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: 7px;
+    font-size: 18px;
+  }
+
+  &__interface {
+    margin: 15px 5px 0;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    border-top: 1px solid $red;
+    color: $red;
+    text-shadow: 0 0 5px $black;
+  }
+
+  &__separator {
+    cursor: default;
+  }
+
+  &__interface-item {
+    position: relative;
+    position: relative;
+    line-height: 1.5em;
+    text-decoration: none;
+    cursor: pointer;
+    color: $red;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      background-color: $red;
+      transition: width 0.2s;
+    }
+
+    @media #{$vertical-tablet} {
+      &:after {
+        display: none !important;
+      }
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  &:not(:first-child) {
+    border-top: 2px solid $red;
+  }
+}

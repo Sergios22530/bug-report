@@ -1,0 +1,40 @@
+@import "../../../assets/scss/properties";
+
+// for laptops and hd monitors
+@media #{$laptops} {
+
+}
+
+// for tablets
+@media #{$horizontal-tablet} {
+  .bug-report-tool {
+    .vue-form-generator {
+      flex-direction: column;
+      overflow: auto;
+      display: block;
+
+      .form-custom-group {
+        &.image-worker {
+          width: 100%;
+          padding-bottom: 100px;
+        }
+
+        &.description {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$vertical-tablet} {
+}
+
+//for mobile
+@media #{$horizontal-mobile} {
+}
+
+@media #{$vertical-mobile} {
+
+}

@@ -1,0 +1,26 @@
+@import "../../assets/scss/properties";
+@import "../../assets/scss/abstracts/mixins";
+
+// for laptops and hd monitors
+@media #{$laptops} {
+
+}
+
+// for tablets
+@media #{$horizontal-tablet} {
+}
+
+@media #{$vertical-tablet} {
+}
+
+//for mobile
+@media #{$horizontal-mobile} {
+}
+
+@media #{$vertical-mobile} {
+  .app {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}

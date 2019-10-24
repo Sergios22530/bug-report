@@ -1,0 +1,113 @@
+@import "../../properties";
+@import "../../abstracts/mixins";
+
+.vue-form-generator {
+
+  .form-control {
+    padding: 6px 12px 6px 0;
+  }
+
+  .field-wrap {
+    margin-top: 5px;
+  }
+
+  fieldset {
+    padding: 0;
+    border: none;
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  .form-group {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    label {
+      padding: 0;
+    }
+
+    &.field-link {
+      margin-top: 15px;
+    }
+
+    &.half {
+      width: 50%;
+      vertical-align: top;
+
+      &:nth-child(2n-1) {
+        padding-right: 15px;
+      }
+
+      &:nth-child(2n) {
+        padding-left: 15px;
+      }
+    }
+
+    &.inline {
+      @include vertical-align();
+
+      label {
+        width: auto;
+        text-align: center;
+        line-height: 1em;
+        min-width: 10%;
+      }
+
+      .field-wrap {
+        padding-left: 30px;
+        width: calc(100% - 55px);
+      }
+
+      .errors {
+        margin-left: 80px;
+      }
+    }
+
+    &.error {
+      .errors {
+        span {
+          background-image: none;
+          font-family: $font2;
+          font-style: italic;
+          font-weight: normal;
+          line-height: 1.2em;
+          font-size: 12px;
+          color: $red;
+          padding: 0;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  label:not(.download-field__label) {
+    font-family: $font2;
+    line-height: 1.5em;
+    font-size: 18px;
+    color: $black;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  div.field-submit {
+    .field-wrap {
+      justify-content: center;
+    }
+
+    input[type=submit] {
+      color: $white !important;
+      background-color: $dark !important;
+      border-color: $red !important;
+      box-shadow: $shadow;
+      border-radius: 0;
+      transition: box-shadow 0.15s;
+
+      &:hover {
+        box-shadow: $hover-shadow;
+      }
+    }
+  }
+}

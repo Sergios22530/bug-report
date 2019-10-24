@@ -1,0 +1,32 @@
+@import "../../../../assets/scss/properties";
+@import "../../../../assets/scss/abstracts/mixins";
+
+// for laptops and hd monitors
+@media #{$laptops} {
+
+}
+
+// for tablets
+@media #{$horizontal-tablet} {
+}
+
+@media #{$vertical-tablet} {
+}
+
+//for mobile
+@media #{$horizontal-mobile} {
+}
+
+@media #{$vertical-mobile} {
+  .comments-list-item {
+
+    .interface-item-text {
+      display: none;
+    }
+
+    &__interface-item {
+      display: block;
+      text-align: center;
+    }
+  }
+}

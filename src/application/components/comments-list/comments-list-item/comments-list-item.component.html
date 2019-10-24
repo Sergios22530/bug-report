@@ -1,0 +1,52 @@
+<div class="comments-list-item">
+    <div class="comments-list-item__text">
+        <div class="comments-list-item__id">
+            <span class="id-text">id: {{issue.id}}</span>
+            <span class="id-copy" v-on:click="copyId"><i class="fas fa-copy"></i></span>
+        </div>
+        <div class="comments-list-item__inform-list" v-if="showDetail">
+            <div class="comments-list-item__info">
+                <span class="text">Описание:</span>
+                <span class="value">{{issue.description}}</span>
+            </div>
+            <div class="comments-list-item__info">
+                <span class="text">Размер экрана (WxY):</span>
+                <span class="value">{{issue.meta.viewportWidth}}x{{issue.meta.viewportHeight}}</span>
+            </div>
+            <div class="comments-list-item__info">
+                <span class="text">Позиция по скролу (XxY):</span>
+                <span class="value">{{issue.meta.scrollX}}x{{issue.meta.scrollY}}</span>
+            </div>
+            <div class="comments-list-item__info">
+                <span class="text">Операционная система:</span>
+                <span class="value">{{issue.meta.os}}</span>
+            </div>
+            <div class="comments-list-item__info">
+                <span class="text">Версия барузера:</span>
+                <span class="value">{{issue.meta.browser}} {{issue.meta.browserVersion}}</span>
+            </div>
+        </div>
+        <div class="comments-list-item__description" v-else>{{issue.description | capitalize}}</div>
+    </div>
+    <div class="comments-list-item__interface">
+        <div class="comments-list-item__interface-item"
+             v-on:click="scrolledTo"
+             v-if="isCurrentPage(issue.meta.href)">
+            <i class="fas fa-arrows-alt"></i> <span class="interface-item-text">Проскролить</span>
+        </div>
+        <a class="comments-list-item__interface-item" v-bind:href="issue.meta.href" v-else>
+            <i class="fas fa-walking"></i> <span class="interface-item-text">Перейти</span>
+        </a>
+        <span class="comments-list-item__separator">|</span>
+        <a class="comments-list-item__interface-item" v-bind:href="issue.photo" target="_blank">
+            <i class="fas fa-image"></i> <span class="interface-item-text">Изображение</span>
+        </a>
+        <span class="comments-list-item__separator">|</span>
+        <div class="comments-list-item__interface-item" v-if="showDetail" v-on:click="toggleDetail">
+            <i class="fas fa-eye-slash"></i> <span class="interface-item-text">Скрыть</span>
+        </div>
+        <div class="comments-list-item__interface-item" v-else v-on:click="toggleDetail">
+            <i class="fas fa-binoculars"></i> <span class="interface-item-text">Подробнее</span>
+        </div>
+    </div>
+</div>
