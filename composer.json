@@ -1,7 +1,6 @@
 {
   "name": "sergios/bug-report",
   "description": "Library for generation report. Based on yii 2 framework and worksection api.",
-  "homepage": "https://github.com/Sergios22530/bug-report",
   "type": "yii2-extension",
   "license": "MIT",
   "authors": [
@@ -10,8 +9,8 @@
       "email": "d.develop@protonmail.com"
     }
   ],
-  "minimum-stability": "master",
-  "version": "3.2.1",
+  "minimum-stability": "stable",
+  "version": "1.0",
   "require": {
     "sergios/yii2-worksection": "*",
     "yiisoft/yii2": ">=2.0.1",
