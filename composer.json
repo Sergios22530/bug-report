@@ -10,7 +10,7 @@
       "email": "d.develop@protonmail.com"
     }
   ],
-  "minimum-stability": "stable",
+  "minimum-stability": "master",
   "version": "3.2.1",
   "require": {
     "sergios/yii2-bug-report": "*",
