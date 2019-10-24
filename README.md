@@ -1,5 +1,5 @@
 # Установка и настройка
-<code>composer require sergios/yii2-bug-report "*"</code>
+<code>composer require sergios/bug-report:dev-master</code>
 
 В параметраы <code>frontend/config/params</code> необходимо положить следующие настройки:<br>
 <pre>
