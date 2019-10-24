@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class BugReportAsset extends AssetBundle
 {
-    public $sourcePath = '@doris/bugReport/assets';
+    public $sourcePath = '@sergios/bugReport/assets';
 
     public $js = [
         'assets/js/app.js',

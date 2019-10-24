@@ -9,6 +9,7 @@ use sergios\worksectionApi\src\mappers\CommentMapper;
 use sergios\worksectionApi\src\models\Comment;
 use sergios\worksectionApi\src\models\User;
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\web\UploadedFile;
@@ -39,7 +40,7 @@ class IssueController extends Controller
             $user->setAttributes(['email' => $params['user']['email']]);
             $comment->setUser($user);
 
-            $errors = $params['errors'] ? $params['errors'] : [];
+            $errors = (ArrayHelper::keyExists('errors',$params) && !empty($params['errors'])) ? $params['errors'] : [];
             if (empty($errors)) {
                 $comment->setTodo(0, 'Сделано!');
             } else {
@@ -73,12 +74,12 @@ class IssueController extends Controller
                 return substr($comment->text, 0, 2) === 'id';
             });
 
-            $commentsModals = array_map(function (Comment $comment) {
-                $issue = new Issue();
-                $issue->setAttributes(IssueComment::commentToIssue($comment));
-
-                return $issue;
-            }, $commentsModals);
+//            $commentsModals = array_map(function (Comment $comment) {
+//                $issue = new Issue();
+//                $issue->setAttributes(IssueComment::commentToIssue($comment));
+//
+//                return $issue;
+//            }, $commentsModals);
 
             return json_encode($commentsModals);
         } catch (Exception $exception) {

@@ -12,7 +12,7 @@ class UserController extends Controller
 {
 
     public function actionView()
-    {
+    {       
         try {
             $filter = $params = Yii::$app->request->get()['filter'];
 

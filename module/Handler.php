@@ -8,7 +8,7 @@ use yii\web\GroupUrlRule;
 
 class Handler extends Module implements BootstrapInterface
 {
-    public $controllerNamespace = 'doris\bugReport\module\controllers';
+    public $controllerNamespace = 'sergios\bugReport\module\controllers';
 
     public function init()
     {
