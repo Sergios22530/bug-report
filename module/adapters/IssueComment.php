@@ -4,6 +4,7 @@ namespace sergios\bugReport\module\adapters;
 
 use sergios\bugReport\module\models\Issue;
 use sergios\worksectionApi\src\models\Comment;
+use yii\helpers\ArrayHelper;
 
 class IssueComment
 {
@@ -16,14 +17,16 @@ class IssueComment
     {
         $text = $comment->text;
         $text = str_replace('----------------------------------', '', $text);
-        $properties = explode(";", $text);
+        $text = str_replace(["\n", "\r"], '|', trim($text));
+        $properties = explode(";||", $text);
         $attributes = [
             'photo' => $comment->fileUrl
         ];
 
         foreach ($properties as $property) {
             $splited = explode(':', $property);
-            $label = str_replace(['\n', '\r'], '', trim($splited[0]));
+            $label = str_replace('||', '', trim($splited[0]));
+            if(!ArrayHelper::keyExists(1,$splited)) continue;
             $value = trim($splited[1]);
 
             switch ($label) {
@@ -59,6 +62,8 @@ class IssueComment
                     break;
                 case 'Мета':
                     $attributes['meta']['source'] = $value;
+                    break;
+                default:
                     break;
             }
         }

@@ -66,12 +66,12 @@ export default class ImageWorkerComponent extends Vue {
                 canvas.toBlob((blob) => {
                     // @ts-ignore
                     const urlCreator = window.URL || window.webkitURL;
-
                     this.$store.dispatch(SCREEN_ACTIONS.setSrc, urlCreator.createObjectURL(blob));
+
                     this.$modal.show('bug-report-tool');
                 });
             });
-        }, 200);
+        }, 1000);
     }
 
     public loadImageFromReader(file: any) {

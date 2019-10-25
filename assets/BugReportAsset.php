@@ -15,7 +15,6 @@ class BugReportAsset extends AssetBundle
 
     public $css = [
         'assets/css/app.css',
-        'assets/css/chunk-vendors.css',
     ];
 
     public $depends = [];

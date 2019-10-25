@@ -65,30 +65,32 @@
     }
   }
 }
-
-input {
-  touch-action: auto;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border-radius: 0;
-  user-select: initial;
-  mix-blend-mode: normal;
-
-  &:before, &:after {
-    -webkit-user-select: initial;
-    -khtml-user-select: initial;
-    -moz-user-select: initial;
-    -ms-user-select: initial;
-    user-select: initial;
-  }
-
-  &[type="number"]::-webkit-outer-spin-button,
-  &[type="number"]::-webkit-inner-spin-button {
+.v--modal {
+  input {
+    touch-action: auto;
+    -moz-appearance: none;
     -webkit-appearance: none;
-    margin: 0;
-  }
+    border-radius: 0;
+    user-select: initial;
+    mix-blend-mode: normal;
 
-  &[type="number"] {
-    -moz-appearance: textfield;
+    &:before, &:after {
+      -webkit-user-select: initial;
+      -khtml-user-select: initial;
+      -moz-user-select: initial;
+      -ms-user-select: initial;
+      user-select: initial;
+    }
+
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
   }
 }
+

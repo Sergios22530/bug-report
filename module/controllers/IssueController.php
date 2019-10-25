@@ -74,12 +74,12 @@ class IssueController extends Controller
                 return substr($comment->text, 0, 2) === 'id';
             });
 
-//            $commentsModals = array_map(function (Comment $comment) {
-//                $issue = new Issue();
-//                $issue->setAttributes(IssueComment::commentToIssue($comment));
-//
-//                return $issue;
-//            }, $commentsModals);
+            $commentsModals = array_map(function (Comment $comment) {
+                $issue = new Issue();
+                $issue->setAttributes(IssueComment::commentToIssue($comment));
+
+                return $issue;
+            }, $commentsModals);
 
             return json_encode($commentsModals);
         } catch (Exception $exception) {
