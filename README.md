@@ -1,5 +1,5 @@
 # Установка и настройка
-<code>composer require sergios/bug-report:dev-master</code>
+<code>composer require sergios/bug-report "*"</code>
 
 В параметраы <code>frontend/config/params</code> необходимо положить следующие настройки:<br>
 <pre>
