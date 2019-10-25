@@ -71,7 +71,7 @@ export default class ImageWorkerComponent extends Vue {
                     this.$modal.show('bug-report-tool');
                 });
             });
-        }, 100);
+        }, 200);
     }
 
     public loadImageFromReader(file: any) {
