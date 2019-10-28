@@ -10,7 +10,7 @@
     }
   ],
   "minimum-stability": "stable",
-  "version": "2.3",
+  "version": "2.4",
   "require": {
     "sergios/yii2-worksection": "*",
     "yiisoft/yii2": ">=2.0.1",
