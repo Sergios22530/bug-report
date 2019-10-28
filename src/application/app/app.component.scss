@@ -9,3 +9,15 @@
   justify-content: flex-end;
   right: 0;
 }
+body.loaded-page {
+  overflow: visible !important;
+  opacity: 1 !important
+}
+
+body.sidebar-mini {
+  overflow: hidden;
+}
+
+.sidebar-mini .wrapper {
+  overflow: hidden;
+}

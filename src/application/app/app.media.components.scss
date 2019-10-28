@@ -22,5 +22,10 @@
     max-width: 100%;
     width: 100%;
     flex-direction: column-reverse;
+    bottom: 0;
+    top: initial;
+  }
+  .application-navigation__buttons {
+    justify-content: flex-end;
   }
 }

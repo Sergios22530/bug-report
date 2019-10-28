@@ -5,15 +5,15 @@
 @import "base/simple-text";
 @import "components/notifications";
 
-body.loaded-page {
-  overflow: visible !important;
-  opacity: 1 !important
-}
+
+
 * {
   &:focus {
     outline: none;
   }
-};
+}
+
+;
 .vue-form-generator * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box
