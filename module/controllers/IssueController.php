@@ -20,21 +20,29 @@ class IssueController extends Controller
     {
         try {
             $params = Yii::$app->request->post();
+            $image = UploadedFile::getInstanceByName('image');
 
             $issue = new Issue();
             $issue->setAttributes(['meta' => $params['meta'], 'description' => $params['description']]);
+
             if (!$issue->validate()) {
                 throw new Exception('Ошибка в описании задачи или в работе приложения. Перезагрузите страницу и попробуйте снова.');
             }
 
+            if($image->size == '1179'){ //empty canvas image data
+                throw new Exception('Ошибка в загрузке фото. Перезагрузите страницу и попробуйте снова.');
+            }
+
             $task = $params['taskUrl'];
+
             if (empty($task)) {
                 throw new Exception('Необходимо авторизоваться в системе.');
             }
 
             $comment = new Comment();
             $comment->setAttributes(IssueComment::issueToComment($issue));
-            $comment->saveImage(UploadedFile::getInstanceByName('image'));
+            $comment->saveImage($image);
+
 
             $user = new User();
             $user->setAttributes(['email' => $params['user']['email']]);

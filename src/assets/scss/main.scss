@@ -5,7 +5,7 @@
 @import "base/simple-text";
 @import "components/notifications";
 
-body {
+body.loaded-page {
   overflow: visible !important;
   opacity: 1 !important
 }

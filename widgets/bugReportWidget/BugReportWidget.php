@@ -14,6 +14,15 @@ use Yii;
 
 class BugReportWidget extends Widget
 {
+    public function init()
+    {
+        Yii::$app->view->registerJsVar('defaultConfig', [
+            'controller' => 'bugReport',
+            'sufix' => (string)Yii::$app->urlManager->suffix,
+        ]);
+        parent::init();
+    }
+
     public function run()
     {
         $user_ip = $_SERVER['REMOTE_ADDR'];

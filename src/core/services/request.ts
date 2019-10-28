@@ -75,7 +75,6 @@ class Request {
 
     private send(url: string, method: string, params: object | null): Promise<any> {
         return new Promise<void>((result, reject?) => {
-
             const path = `/${config.controller}/${url}${config.sufix}`;
             const token = Request.getCSRFToken();
 
